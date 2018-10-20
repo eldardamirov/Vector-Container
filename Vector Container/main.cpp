@@ -90,8 +90,10 @@ class Vector
 				buffer [ i ] = storage [ i ];
 				}
 
-			delete[] storage;
-
+            delete[] storage;
+            
+            reservedCapacity = ( reservedCapacity + 10 );
+            
 			storage = buffer;
 			}
 
@@ -130,21 +132,48 @@ int main()
 	myVector.push_back ( 9 );
 	myVector.push_back ( 5 );
 	myVector.push_back ( 6 );
+    myVector.push_back ( 5 );
+    myVector.push_back ( 7 );
+    myVector.push_back ( 1 );
+    myVector.push_back ( 5 );
+    myVector.push_back ( 9 );
+    myVector.push_back ( 5 );
+    myVector.push_back ( 6 );   
+    myVector.push_back ( 4 );
+    myVector.push_back ( 5 );
+    myVector.push_back ( 7 );
+    myVector.push_back ( 1 );
+    myVector.push_back ( 5 );
+    myVector.push_back ( 9 );
+    myVector.push_back ( 5 );
+    myVector.push_back ( 6 );
+    myVector.push_back ( 5 );
+    myVector.push_back ( 7 );
+    myVector.push_back ( 1 );
+    myVector.push_back ( 5 );
+    myVector.push_back ( 9 );
+    myVector.push_back ( 5 );
+    myVector.push_back ( 6 );
+    myVector.push_back ( 1 );
+    myVector.push_back ( 5 );
+    myVector.push_back ( 9 );
+    myVector.push_back ( 5 );
+    myVector.push_back ( 6 );
 
-	printf ( "%d %d %d\n", myVector.back(), myVector.at ( 5 ), myVector.top() );
-	/*
-	for ( int i = 0; i < 10; i++ )
+//    printf ( "%d %d %d\n", myVector.back(), myVector.at ( 5 ), myVector.top() );
+	
+	for ( int i = 0; i < 35; i++ )
 		{
 		printf ( "%d ", myVector [ i ] );
 		}
-	*/
-	std::sort ( myVector.begin(), myVector.end() );
-	for ( auto temp : myVector )
-		{
-		printf ( "%d ", temp );
-		}
+	
+//    std::sort ( myVector.begin(), myVector.end() );
+//    for ( auto temp : myVector )
+//        {
+//        printf ( "%d ", temp );
+//        }
 
-	getchar();
+//    getchar();
 
 	return 0;
 	}
